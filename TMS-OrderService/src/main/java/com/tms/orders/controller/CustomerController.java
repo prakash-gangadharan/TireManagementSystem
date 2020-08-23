@@ -1,11 +1,12 @@
-package com.hendisantika.springbootorders.controller;
+package com.tms.orders.controller;
 
-import com.hendisantika.springbootorders.model.Customer;
-import com.hendisantika.springbootorders.repository.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.tms.orders.model.Customer;
+import com.tms.orders.repository.CustomerRepo;
 
 import java.util.List;
 

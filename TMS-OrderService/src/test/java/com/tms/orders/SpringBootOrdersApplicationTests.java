@@ -1,4 +1,4 @@
-package com.hendisantika.springbootorders;
+package com.tms.orders;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

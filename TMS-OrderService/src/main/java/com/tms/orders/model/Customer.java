@@ -1,4 +1,4 @@
-package com.hendisantika.springbootorders.model;
+package com.tms.orders.model;
 
 import javax.persistence.*;
 

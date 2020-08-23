@@ -1,7 +1,8 @@
-package com.hendisantika.springbootorders.repository;
+package com.tms.orders.repository;
 
-import com.hendisantika.springbootorders.model.Orders;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.tms.orders.model.Orders;
 
 
 public interface OrderRepo extends JpaRepository<Orders, Long> {

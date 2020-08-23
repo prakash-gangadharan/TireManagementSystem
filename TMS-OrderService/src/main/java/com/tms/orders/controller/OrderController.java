@@ -1,13 +1,14 @@
-package com.hendisantika.springbootorders.controller;
+package com.tms.orders.controller;
 
-import com.hendisantika.springbootorders.model.OrderDetails;
-import com.hendisantika.springbootorders.model.Orders;
-import com.hendisantika.springbootorders.repository.OrderDetailsRepo;
-import com.hendisantika.springbootorders.repository.OrderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.tms.orders.model.OrderDetails;
+import com.tms.orders.model.Orders;
+import com.tms.orders.repository.OrderDetailsRepo;
+import com.tms.orders.repository.OrderRepo;
 
 import java.util.List;
 

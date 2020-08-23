@@ -8,13 +8,13 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.hendisantika</groupId>
-	<artifactId>spring-boot-orders</artifactId>
+	<groupId>com.tms</groupId>
+	<artifactId>TMS-OrderService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-boot-orders</name>
-	<description>Demo project for Spring Boot</description>
+	<name>TMS-OrderService</name>
+	<description>Project for TMS Orders</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
