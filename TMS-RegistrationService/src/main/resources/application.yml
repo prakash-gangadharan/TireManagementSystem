@@ -1,4 +1,8 @@
+server:
+    port: 8081
 spring:
+    application:
+        name: TireManagementSystem-Registration
     datasource:
         url: jdbc:mysql://localhost:3306/mysqljdbc?createDatabaseIfNotExist=true
         username: user

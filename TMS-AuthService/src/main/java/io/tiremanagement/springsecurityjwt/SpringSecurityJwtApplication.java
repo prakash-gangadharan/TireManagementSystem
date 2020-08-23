@@ -3,6 +3,7 @@ package io.tiremanagement.springsecurityjwt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -29,6 +30,7 @@ import io.tiremanagement.springsecurityjwt.models.AuthenticationResponse;
 import io.tiremanagement.springsecurityjwt.util.JwtUtil;
 
 @SpringBootApplication
+@EnableEurekaClient
 public class SpringSecurityJwtApplication {
 
 	public static void main(String[] args) {
