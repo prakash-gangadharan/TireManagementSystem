@@ -1,4 +1,8 @@
+server:
+    port: 8083
 spring:
+  application:
+      name: TMS-OrderService
   jpa:
     database: MYSQL
     hibernate:

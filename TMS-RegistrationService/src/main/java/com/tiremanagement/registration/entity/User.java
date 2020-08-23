@@ -33,11 +33,16 @@ public class User {
 
     private String firstName;
     private String lastName;
+    private String username;
     private String address;
     private String state;
     private String country;
     private String email;
     private String password;
+    private String panNo;
+    private String contactNo;
+    private String dob;
+    private String vehicleDetails;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
