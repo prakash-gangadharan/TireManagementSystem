@@ -8,10 +8,10 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.javabrains</groupId>
-	<artifactId>discovery-server</artifactId>
+	<groupId>io.tms</groupId>
+	<artifactId>TMS-DiscoveryServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>discovery-server</name>
+	<name>TMS-DiscoveryServer</name>
 	<description>Service discovery server</description>
 
 	<properties>
