@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 	<groupId>com.tiremanagement.registration</groupId>
-	<artifactId>TireManagementSystem-Registration</artifactId>
+	<artifactId>TMS-UserService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TireManagementSystem-Registration</name>
+	<name>TMS-UserService</name>
 	<description>Tire Management System User Registration</description>
 
 	<properties>

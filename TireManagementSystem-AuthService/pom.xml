@@ -10,9 +10,9 @@
 	</parent>
 	
 	<groupId>io.tms</groupId>
-	<artifactId>TMS-AuthService</artifactId>
+	<artifactId>TireManagementSystem-AuthService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TMS-AuthService</name>
+	<name>TireManagementSystem-AuthService</name>
 	<description>project for Spring Boot TMS-AuthService</description>
 
 	<properties>

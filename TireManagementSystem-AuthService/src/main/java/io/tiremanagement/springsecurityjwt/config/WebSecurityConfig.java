@@ -1,10 +1,11 @@
-package io.tiremanagement.springsecurityjwt;
+package io.tiremanagement.springsecurityjwt.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -27,59 +28,11 @@ import org.springframework.web.bind.annotation.RestController;
 import io.tiremanagement.springsecurityjwt.filters.JwtRequestFilter;
 import io.tiremanagement.springsecurityjwt.models.AuthenticationRequest;
 import io.tiremanagement.springsecurityjwt.models.AuthenticationResponse;
+import io.tiremanagement.springsecurityjwt.service.MyUserDetailsService;
 import io.tiremanagement.springsecurityjwt.util.JwtUtil;
 
-@SpringBootApplication
-@EnableEurekaClient
-public class SpringSecurityJwtApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityJwtApplication.class, args);
-	}
-
-}
-
-@RestController
-class HelloWorldController {
-
-	@Autowired
-	private AuthenticationManager authenticationManager;
-
-	@Autowired
-	private JwtUtil jwtTokenUtil;
-
-	@Autowired
-	private MyUserDetailsService userDetailsService;
-
-	@RequestMapping({ "/hello" })
-	public String firstPage() {
-		return "Hello World";
-	}
-
-	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-	public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
-
-		try {
-			authenticationManager.authenticate(
-					new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword())
-			);
-		}
-		catch (BadCredentialsException e) {
-			throw new Exception("Incorrect username or password", e);
-		}
-
-
-		final UserDetails userDetails = userDetailsService
-				.loadUserByUsername(authenticationRequest.getUsername());
-
-		final String jwt = jwtTokenUtil.generateToken(userDetails);
-
-		return ResponseEntity.ok(new AuthenticationResponse(jwt));
-	}
-
-}
-
 @EnableWebSecurity
+@Configuration
 class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private UserDetailsService myUserDetailsService;
@@ -105,9 +58,16 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.csrf().disable()
-				.authorizeRequests().antMatchers("/authenticate").permitAll().
-						anyRequest().authenticated().and().
-						exceptionHandling().and().sessionManagement()
+		.authorizeRequests()
+		.antMatchers(
+				"/**",
+				"/authenticate"
+				)
+		.permitAll()
+		.anyRequest()
+				.authenticated().and()
+				.exceptionHandling().and()
+				.sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 

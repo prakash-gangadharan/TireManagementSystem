@@ -1,4 +1,4 @@
-package io.tiremanagement.springsecurityjwt;
+package io.tiremanagement.springsecurityjwt.service;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
