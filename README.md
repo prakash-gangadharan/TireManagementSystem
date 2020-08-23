@@ -1,2 +1,0 @@
-# TireManagementSystem
-Tire Management System
