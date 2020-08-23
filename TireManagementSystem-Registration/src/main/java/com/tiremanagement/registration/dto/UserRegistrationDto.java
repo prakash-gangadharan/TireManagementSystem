@@ -42,13 +42,10 @@ public class UserRegistrationDto {
     @NotEmpty
     private String confirmEmail;
     
-    @NotEmpty
     private String address;
     
-    @NotEmpty
     private String state;
    
-    @NotEmpty
     private String country;
 
     private String pan;
