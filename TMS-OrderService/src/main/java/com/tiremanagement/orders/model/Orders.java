@@ -1,22 +1,16 @@
 package com.tiremanagement.orders.model;
 
-import javax.persistence.*;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Set;
-
-/**
- * Created by IntelliJ IDEA.
- * Project : spring-boot-orders
- * User: hendisantika
- * Email: hendisantika@gmail.com
- * Telegram : @hendisantika34
- * Date: 16/11/17
- * Time: 06.48
- * To change this template use File | Settings | File Templates.
- */
 
 @Entity
 @Setter

@@ -10,17 +10,6 @@ import com.tiremanagement.orders.repository.CustomerRepo;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * Project : spring-boot-orders
- * User: hendisantika
- * Email: hendisantika@gmail.com
- * Telegram : @hendisantika34
- * Date: 16/11/17
- * Time: 07.34
- * To change this template use File | Settings | File Templates.
- */
-
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerController {

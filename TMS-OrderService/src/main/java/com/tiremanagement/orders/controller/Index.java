@@ -8,17 +8,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by IntelliJ IDEA.
- * Project : spring-boot-orders
- * User: hendisantika
- * Email: hendisantika@gmail.com
- * Telegram : @hendisantika34
- * Date: 16/11/17
- * Time: 07.13
- * To change this template use File | Settings | File Templates.
- */
-
 @RestController
 @RequestMapping("/")
 public class Index {

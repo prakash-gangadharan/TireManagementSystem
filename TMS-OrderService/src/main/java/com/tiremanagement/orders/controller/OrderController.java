@@ -12,17 +12,6 @@ import com.tiremanagement.orders.repository.OrderRepo;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * Project : spring-boot-orders
- * User: hendisantika
- * Email: hendisantika@gmail.com
- * Telegram : @hendisantika34
- * Date: 18/11/17
- * Time: 19.30
- * To change this template use File | Settings | File Templates.
- */
-
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {
