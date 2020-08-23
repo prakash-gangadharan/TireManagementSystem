@@ -1,4 +1,4 @@
-package io.javabrains.discoveryserver;
+package io.tms.discoveryserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
